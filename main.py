@@ -8,7 +8,7 @@ from kivy.uix.image import Image
 class LikeApp(App):
     def build(self):
         self.mainBox = BoxLayout(orientation="vertical")
-        self.lbl_title  = Label(text='rate this picture')
+        self.lbl_title  = Label(text='rate this picture', font_size= 30)
         self.image = Image(source="f11cfe34ed1a91e120326b2ea06296b2.jpg")
         btn_layout = BoxLayout(size_hint =[1,0.2])
 
@@ -22,4 +22,6 @@ class LikeApp(App):
         btn_layout.add_widget(btn_dislike)
 
         self.mainBox.add_widget(btn_layout)
+
+        return self.mainBox
 LikeApp().run()
